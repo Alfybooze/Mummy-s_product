@@ -27,11 +27,11 @@
             <a href="products.html">Products</a>
             <a href="#">Applications</a>
             <a href="#">About Us</a>
-            <a href="#">Contact</a>
+           
             
             <!-- Auth button moved inside nav-links for mobile view -->
             <div class="auth-buttons">
-                <a href="#" class="sign-up">Sign up</a>
+                <a href="#" class="sign-up">Contact us</a>
             </div>
         </div>
     </nav>
@@ -119,6 +119,27 @@
                     <a href="#" class="learn-more product-link" data-product="custom-solutions">View Details →</a>
                 </div>
             </div>
+
+            <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="category-image">
+                    <img src="images\consultancy.jpg" alt="Consultancy" class="product-image" data-product="consultancy">
+                </div>
+                <div class="category-content">
+                    <h3>Cunsultancy</h3>
+                    <p>Get Expert guidiance form our seasoned experts on the whole developement life cycle of rubber products fron the extraction to the compounding to the to the shaping, until you arrive at a quality useable rubber product</p>
+                    <a href="#" class="learn-more product-link" data-product="consultancy">View Details →</a>
+                </div>
+            </div>
+                <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="category-image">
+                    <img src="images\Training_rubber.jpg" alt="Training Services" class="product-image" data-product="training">
+                </div>
+                <div class="category-content">
+                    <h3>Training</h3>
+                    <p>Custom-designed rubber solutions created through our collaborative engineering process, utilizing advanced materials science to develop products perfectly tailored to your specific operational requirements.</p>
+                    <a href="#" class="learn-more product-link" data-product="training">View Details →</a>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -154,7 +175,7 @@
                         </ul>
                     </div>
                     <div class="modal-cta">
-                        <a href="#" class="modal-cta-button inquire-button">Request Quote</a>
+                        <a href="#" class="modal-cta-button inquire-button">Get in touch</a>
                         <a href="#" class="modal-cta-button catalog-button">Download Specs</a>
                     </div>
                 </div>
@@ -275,146 +296,195 @@ mobileMenuBtn.addEventListener('click', () => {
         const productLinks = document.querySelectorAll('.product-link');
         
         // Product data
-        const productData = {
-            'industrial-gloves': {
-                title: 'Advanced Protection Systems',
-                category: 'Industrial Safety',
-                image: 'images\\WhatsApp Image 2025-04-24 at 12.43.26_fd88174b.jpg',
-                description: '<p>Our premium industrial gloves represent the pinnacle of hand protection technology, combining superior chemical resistance with exceptional tactile sensitivity and comfort for extended wear.</p><p>Engineered with our proprietary multi-layer vulcanized rubber compound, these gloves have been tested to withstand exposure to over 200 industrial chemicals while maintaining structural integrity and protective properties.</p>',
-                features: [
-                    'Triple-layer composite rubber construction for maximum protection',
-                    'Ergonomic design with enhanced grip pattern for wet and dry environments',
-                    'Proprietary moisture-wicking inner lining for all-day comfort',
-                    'Extended cuff design provides forearm protection',
-                    'Available in five sizes with color-coded bands for easy identification',
-                    'Meets or exceeds ASTM F739, EN 374-1, and ISO 18889 standards'
-                ],
-                applications: [
-                    'Chemical Processing',
-                    'Pharmaceutical Manufacturing',
-                    'Oil & Gas',
-                    'Mining',
-                    'Agriculture',
-                    'Laboratory Work',
-                    'Food Processing'
-                ]
-            },
-            'rubber-bags': {
-                title: 'Premium Carrying Solutions',
-                category: 'Storage & Transport',
-                image: 'images\\Rubber_bags.jpg',
-                description: '<p>Our revolutionary vulcanized rubber bags deliver unparalleled durability combined with sophisticated design aesthetics, making them ideal for diverse carrying applications from industrial use to everyday transportation needs.</p><p>Each bag is crafted using our advanced molding technology that creates seamless construction with reinforced stress points, effectively eliminating common failure points while maintaining flexibility and lightweight properties.</p>',
-                features: [
-                    'Seamless one-piece construction eliminates weak points',
-                    'Patented moisture-barrier technology keeps contents dry in all conditions',
-                    'Reinforced handle attachment points rated for 5x the expected load',
-                    'Chemical-resistant exterior withstands exposure to common industrial substances',
-                    'Self-healing polymer technology for minor punctures',
-                    'Temperature stable from -40°C to +120°C'
-                ],
-                applications: [
-                    'Industrial Materials Transport',
-                    'Chemical Storage',
-                    'Marine Environments',
-                    'Outdoor Equipment',
-                    'Laboratory Sample Transport',
-                    'Emergency Response',
-                    'Construction'
-                ]
-            },
-            'protective-wares': {
-                title: 'Ultimate Safety Gear',
-                category: 'Personal Protective Equipment',
-                image: 'images\\Protective rubber ware.jpg',
-                description: '<p>Our comprehensive line of rubber protective equipment offers uncompromising safety for personnel working in hazardous environments, featuring our multi-layered composite technology that provides exceptional protection against chemical, thermal, and physical hazards.</p><p>Each piece is ergonomically designed to maximize comfort during extended wear periods while maintaining full range of motion and operational effectiveness.</p>',
-                features: [
-                    'Multi-zone protection system with targeted reinforcement',
-                    'Proprietary thermal regulation technology maintains comfort in extreme conditions',
-                    'Quick-release emergency removal system',
-                    'Integrated connection points for complementary safety equipment',
-                    'Reflective elements for enhanced visibility in low-light conditions',
-                    'Anti-static properties prevent spark hazards'
-                ],
-                applications: [
-                    'Chemical Handling',
-                    'Emergency Response',
-                    'Manufacturing',
-                    'Research Facilities',
-                    'Waste Management',
-                    'Electrical Work',
-                    'Offshore Operations'
-                ]
-            },
-            'spare-parts': {
-                title: 'Precision Engineered Components',
-                category: 'Industrial Components',
-                image: 'images\\rubber artifacts.jpg',
-                description: '<p>Our advanced rubber spare parts are manufactured to exacting specifications using proprietary molding and finishing techniques, ensuring optimal performance and extended service life in critical mechanical systems.</p><p>We utilize advanced computer modeling and stress analysis to optimize each component for its specific application, resulting in parts that exceed OEM specifications for durability and performance.</p>',
-                features: [
-                    'Precision molded to ±0.05mm tolerance for critical dimensions',
-                    'Compound formulations customized for specific operating conditions',
-                    'Enhanced vibration dampening characteristics',
-                    'Superior resistance to aging, ozone, and UV degradation',
-                    'Available in standard and custom sizes with rapid production capability',
-                    'Full traceability with batch-specific material certification'
-                ],
-                applications: [
-                    'Heavy Machinery',
-                    'Automotive Systems',
-                    'Fluid Handling Equipment',
-                    'Pneumatic Systems',
-                    'Electrical Insulation',
-                    'Vibration Isolation',
-                    'Sealing Applications'
-                ]
-            },
-            'rubber-bands': {
-                title: 'High-Performance Elastics',
-                category: 'Fastening Solutions',
-                image: 'images\\Rubber band.jpg',
-                description: '<p>Our innovative rubber bands are designed with an exclusive polymer blend that delivers exceptional tensile strength and elasticity retention, making them ideal for applications requiring reliable performance over extended use cycles.</p><p>Each band is formulated with precision-controlled cure cycles and post-processing techniques that optimize molecular cross-linking for superior mechanical properties and environmental resistance.</p>',
-                features: [
-                    'Maintains over 95% elasticity after 10,000 extension cycles',
-                    'Temperature stability from -20°C to +70°C without property degradation',
-                    'UV-stabilized compound prevents degradation in outdoor applications',
-                    'Available in standard and custom widths, thicknesses, and diameters',
-                    'Color-coded options for easy identification and sorting',
-                    'Latex-free options for sensitive environments'
-                ],
-                applications: [
-                    'Industrial Bundling',
-                    'Agricultural Uses',
-                    'Office Organization',
-                    'Food Processing',
-                    'Manufacturing',
-                    'Shipping & Logistics',
-                    'Retail Packaging'
-                ]
-            },
-            'custom-solutions': {
-                title: 'Bespoke Rubber Innovations',
-                category: 'Custom Engineering',
-                image: 'images\\rubber products.jpg',
-                description: '<p>Our custom-designed rubber solutions leverage advanced materials science and collaborative engineering to develop products perfectly tailored to your specific operational requirements and environmental challenges.</p><p>Our team of polymer scientists and application engineers works directly with your technical staff to understand performance requirements, operating conditions, and compatibility needs before developing custom formulations and designs.</p>',
-                features: [
-                    'Comprehensive needs analysis and application profiling',
-                    'Advanced material selection from over 200 base compounds',
-                    'Rapid prototyping with 3D-printed molds for concept validation',
-                    'Iterative design optimization through field testing',
-                    'Scalable production from small batches to high-volume manufacturing',
-                    'Ongoing technical support and product refinement'
-                ],
-                applications: [
-                    'Specialized Industrial Processes',
-                    'Extreme Environment Operations',
-                    'Medical & Healthcare',
-                    'Aerospace & Defense',
-                    'Emerging Technologies',
-                    'Infrastructure Projects',
-                    'Consumer Products'
-                ]
-            }
-        };
+        // Product data with added consultancy and training sections
+const productData = {
+    'industrial-gloves': {
+        title: 'Advanced Protection Systems',
+        category: 'Industrial Safety',
+        image: 'images\\WhatsApp Image 2025-04-24 at 12.43.26_fd88174b.jpg',
+        description: '<p>Our premium industrial gloves represent the pinnacle of hand protection technology, combining superior chemical resistance with exceptional tactile sensitivity and comfort for extended wear.</p><p>Engineered with our proprietary multi-layer vulcanized rubber compound, these gloves have been tested to withstand exposure to over 200 industrial chemicals while maintaining structural integrity and protective properties.</p>',
+        features: [
+            'Triple-layer composite rubber construction for maximum protection',
+            'Ergonomic design with enhanced grip pattern for wet and dry environments',
+            'Proprietary moisture-wicking inner lining for all-day comfort',
+            'Extended cuff design provides forearm protection',
+            'Available in five sizes with color-coded bands for easy identification',
+            'Meets or exceeds ASTM F739, EN 374-1, and ISO 18889 standards'
+        ],
+        applications: [
+            'Chemical Processing',
+            'Pharmaceutical Manufacturing',
+            'Oil & Gas',
+            'Mining',
+            'Agriculture',
+            'Laboratory Work',
+            'Food Processing'
+        ]
+    },
+    'rubber-bags': {
+        title: 'Premium Carrying Solutions',
+        category: 'Storage & Transport',
+        image: 'images\\Rubber_bags.jpg',
+        description: '<p>Our revolutionary vulcanized rubber bags deliver unparalleled durability combined with sophisticated design aesthetics, making them ideal for diverse carrying applications from industrial use to everyday transportation needs.</p><p>Each bag is crafted using our advanced molding technology that creates seamless construction with reinforced stress points, effectively eliminating common failure points while maintaining flexibility and lightweight properties.</p>',
+        features: [
+            'Seamless one-piece construction eliminates weak points',
+            'Patented moisture-barrier technology keeps contents dry in all conditions',
+            'Reinforced handle attachment points rated for 5x the expected load',
+            'Chemical-resistant exterior withstands exposure to common industrial substances',
+            'Self-healing polymer technology for minor punctures',
+            'Temperature stable from -40°C to +120°C'
+        ],
+        applications: [
+            'Industrial Materials Transport',
+            'Chemical Storage',
+            'Marine Environments',
+            'Outdoor Equipment',
+            'Laboratory Sample Transport',
+            'Emergency Response',
+            'Construction'
+        ]
+    },
+    'protective-wares': {
+        title: 'Ultimate Safety Gear',
+        category: 'Personal Protective Equipment',
+        image: 'images\\Protective rubber ware.jpg',
+        description: '<p>Our comprehensive line of rubber protective equipment offers uncompromising safety for personnel working in hazardous environments, featuring our multi-layered composite technology that provides exceptional protection against chemical, thermal, and physical hazards.</p><p>Each piece is ergonomically designed to maximize comfort during extended wear periods while maintaining full range of motion and operational effectiveness.</p>',
+        features: [
+            'Multi-zone protection system with targeted reinforcement',
+            'Proprietary thermal regulation technology maintains comfort in extreme conditions',
+            'Quick-release emergency removal system',
+            'Integrated connection points for complementary safety equipment',
+            'Reflective elements for enhanced visibility in low-light conditions',
+            'Anti-static properties prevent spark hazards'
+        ],
+        applications: [
+            'Chemical Handling',
+            'Emergency Response',
+            'Manufacturing',
+            'Research Facilities',
+            'Waste Management',
+            'Electrical Work',
+            'Offshore Operations'
+        ]
+    },
+    'spare-parts': {
+        title: 'Precision Engineered Components',
+        category: 'Industrial Components',
+        image: 'images\\rubber artifacts.jpg',
+        description: '<p>Our advanced rubber spare parts are manufactured to exacting specifications using proprietary molding and finishing techniques, ensuring optimal performance and extended service life in critical mechanical systems.</p><p>We utilize advanced computer modeling and stress analysis to optimize each component for its specific application, resulting in parts that exceed OEM specifications for durability and performance.</p>',
+        features: [
+            'Precision molded to ±0.05mm tolerance for critical dimensions',
+            'Compound formulations customized for specific operating conditions',
+            'Enhanced vibration dampening characteristics',
+            'Superior resistance to aging, ozone, and UV degradation',
+            'Available in standard and custom sizes with rapid production capability',
+            'Full traceability with batch-specific material certification'
+        ],
+        applications: [
+            'Heavy Machinery',
+            'Automotive Systems',
+            'Fluid Handling Equipment',
+            'Pneumatic Systems',
+            'Electrical Insulation',
+            'Vibration Isolation',
+            'Sealing Applications'
+        ]
+    },
+    'rubber-bands': {
+        title: 'High-Performance Elastics',
+        category: 'Fastening Solutions',
+        image: 'images\\Rubber band.jpg',
+        description: '<p>Our innovative rubber bands are designed with an exclusive polymer blend that delivers exceptional tensile strength and elasticity retention, making them ideal for applications requiring reliable performance over extended use cycles.</p><p>Each band is formulated with precision-controlled cure cycles and post-processing techniques that optimize molecular cross-linking for superior mechanical properties and environmental resistance.</p>',
+        features: [
+            'Maintains over 95% elasticity after 10,000 extension cycles',
+            'Temperature stability from -20°C to +70°C without property degradation',
+            'UV-stabilized compound prevents degradation in outdoor applications',
+            'Available in standard and custom widths, thicknesses, and diameters',
+            'Color-coded options for easy identification and sorting',
+            'Latex-free options for sensitive environments'
+        ],
+        applications: [
+            'Industrial Bundling',
+            'Agricultural Uses',
+            'Office Organization',
+            'Food Processing',
+            'Manufacturing',
+            'Shipping & Logistics',
+            'Retail Packaging'
+        ]
+    },
+    'custom-solutions': {
+        title: 'Bespoke Rubber Innovations',
+        category: 'Custom Engineering',
+        image: 'images\\rubber products.jpg',
+        description: '<p>Our custom-designed rubber solutions leverage advanced materials science and collaborative engineering to develop products perfectly tailored to your specific operational requirements and environmental challenges.</p><p>Our team of polymer scientists and application engineers works directly with your technical staff to understand performance requirements, operating conditions, and compatibility needs before developing custom formulations and designs.</p>',
+        features: [
+            'Comprehensive needs analysis and application profiling',
+            'Advanced material selection from over 200 base compounds',
+            'Rapid prototyping with 3D-printed molds for concept validation',
+            'Iterative design optimization through field testing',
+            'Scalable production from small batches to high-volume manufacturing',
+            'Ongoing technical support and product refinement'
+        ],
+        applications: [
+            'Specialized Industrial Processes',
+            'Extreme Environment Operations',
+            'Medical & Healthcare',
+            'Aerospace & Defense',
+            'Emerging Technologies',
+            'Infrastructure Projects',
+            'Consumer Products'
+        ]
+    },
+    'consultancy': {
+        title: 'Expert Rubber Technology Consulting',
+        category: 'Professional Services',
+        image: 'images\\consultancy.jpg',
+        description: '<p>Our specialized rubber technology consultancy services provide comprehensive expertise to help organizations optimize their rubber-based systems, enhance manufacturing processes, and develop innovative solutions to complex technical challenges.</p><p>Led by industry veterans with decades of combined experience in polymer science and industrial applications, our consultancy team delivers actionable insights and proven methodologies to improve performance, extend product life cycles, and reduce operational costs.</p>',
+        features: [
+            'Comprehensive facilities and production process audits',
+            'Material selection and formulation optimization',
+            'Manufacturing efficiency and quality control enhancement',
+            'Failure analysis and performance troubleshooting',
+            'Supply chain integration and vendor qualification',
+            'Regulatory compliance and certification guidance',
+            'Sustainable and eco-friendly rubber technology implementation'
+        ],
+        applications: [
+            'Manufacturing Process Optimization',
+            'Product Development',
+            'Quality Assurance Programs',
+            'Technical Problem Resolution',
+            'Operational Excellence Initiatives',
+            'Sustainability Implementation',
+            'Research & Development Support'
+        ]
+    },
+    'training': {
+        title: 'Comprehensive Rubber Technology Training',
+        category: 'Educational Services',
+        image: 'images\\Training_rubber.jpg',
+        description: '<p>Our specialized training programs provide in-depth education on all aspects of rubber technology, manufacturing processes, and application-specific best practices, delivered by industry experts with extensive practical experience.</p><p>Each training module combines theoretical knowledge with hands-on practical sessions in our state-of-the-art demonstration facility, ensuring participants develop both conceptual understanding and practical skills applicable to their specific industrial context.</p>',
+        features: [
+            'Customized curriculum tailored to organizational needs and skill levels',
+            'Modular program structure allowing focused learning on specific aspects',
+            'Practical demonstrations and hands-on workshops with industrial equipment',
+            'Comprehensive course materials including digital resources and reference guides',
+            'Pre and post-training assessments to measure knowledge acquisition',
+            'Certification upon successful course completion',
+            'Follow-up support and implementation guidance'
+        ],
+        applications: [
+            'Technical Staff Development',
+            'New Employee Onboarding',
+            'Process Optimization Training',
+            'Quality Control Education',
+            'Maintenance Best Practices',
+            'Safety Protocol Implementation',
+            'Advanced Troubleshooting Techniques'
+        ]
+    }
+};
         
         // Open modal function
         function openProductModal(productId) {
