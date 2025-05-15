@@ -652,7 +652,7 @@ footer::before {
 }
 
 .modal-image {
-    width: 100%;
+    width: 150%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
