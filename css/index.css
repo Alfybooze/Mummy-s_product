@@ -238,6 +238,11 @@ body {
     min-width: 180px;
     box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
     letter-spacing: 0.5px;
+    outline: none;
+}
+
+.cta-button a:focus {
+    outline: none;
 }
 
 .cta-button:hover {
