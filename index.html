@@ -55,6 +55,7 @@
     <!-- Product Categories -->
     <section class="categories">
         <h2>Pioneering Rubber Excellence</h2>
+        <h6>Summary of our products include</h6>
         <div class="category-grid">
             <div class="category-card">
                 <div class="category-image" data-aos="fade-up">
@@ -143,6 +144,18 @@
                 </div>
             </div>
         </div>
+        <h3 class="contact-info">Our Services are fast and reliable combined with our long lasting and affordable products, we promise you've never seen anything like it. For more enquiries reach out to us on our WhatsApp handle and we'll respond within 2 to 3 minutes you can also reach us by email or simply place a call</h3>
+         <div class="floating-icons">
+        <a href="tel:+2348037225914" class="floating-icon phone-icon" target="_blank">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/+2348037225914?text=I'm%20interested%20in%20your%20service%20and%20product%20but%20I%20have%20some%20enquiries" class="floating-icon whatsapp-icon" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:zeenwoke@yahoo.com" class="floating-icon email-icon" target="_blank">
+            <i class="far fa-envelope"></i>
+        </a>
+    </div>
     </section>
     
     <!-- Product Modal -->
@@ -238,6 +251,7 @@
         </div>
     </footer>
     
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -561,6 +575,28 @@ const productData = {
                 closeProductModal();
             }
         });
+        
+        // Update the existing showWhatsAppIcon function
+        const contactSection = document.querySelector('.contact-info');
+        const floatingIcons = document.querySelectorAll('.floating-icon');
+
+        const showIcons = () => {
+            const categoriesSection = document.querySelector('.categories h2');
+            const floatingIcons = document.querySelector('.floating-icons');
+            if (!categoriesSection || !floatingIcons) return;
+            
+            const rect = categoriesSection.getBoundingClientRect();
+            const triggerPoint = window.innerHeight / 2;
+            
+            if (rect.top < triggerPoint) {
+                floatingIcons.classList.add('visible');
+            } else {
+                floatingIcons.classList.remove('visible');
+            }
+        };
+
+        window.addEventListener('scroll', showIcons);
+        window.addEventListener('load', showIcons);
     </script>
 </body>
 </html>
